@@ -1,0 +1,29 @@
+<h1 align="center" >Details about the contact: </h1> 
+<%= @book.firstname %>
+<div class ="entry">
+<img src="/data/<%=@book.photo %>" width="150" height = "200"/>
+</div>
+<p>First Name:
+<%= @book.firstname %>
+</p>
+<p>
+Last Name:
+<%= @book.lastname %>
+</p>
+<p>
+Emailid
+<%= @book.emailid %>
+</p>
+<p>
+ Phonenumber:
+<%= @book.phonenumber %>
+</p>
+Address:
+<%= @book.address %>
+</p>
+<p>
+Gender
+<%= @book.gender %>
+<br>
+<%= link_to 'back to list', books_path %> 
+<%= link_to 'to create new', new_book_path %> 
