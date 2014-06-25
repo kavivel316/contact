@@ -13,43 +13,48 @@ fill the form correctely <h2>
 <% end %>
 <p>
 <%= f.label :First_Name %>
-&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+
 <%= f.text_field :firstname %>
 </p>
-  
+  <br>
 <p>
 <%= f.label :Last_Name %>
-&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+
 <%= f.text_field :lastname %>
 </p>
-<p>
+<br>
 <p>
 <%= f.label :Emailid %>
-&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
 <%= f.text_field :emailid %> 
 </p>
-</b>
-<p>
-<p>
-
-<%= radio_button :book, :gender, :male %> Male
+<br>
+<br>
+<p style="margin-left:21em;" >
+ 
+<%= radio_button :book, :gender, :male  %> Male
 <%= radio_button :book, :gender, :female %>Female
+</p>
+<br>
 <p>
 <%= f.label :Phonenumber %>
-&nbsp &nbsp &nbsp
+
 <%= f.text_field :phonenumber%>
 </p>
+<br>
 <p>
-<%= f.label :photo  %><br>
+<%= f.label :photo  %>
 <%= f.file_field :photo %>
 </p>
+<br>
 <p>
 <%= f.label :Address %>
-&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
 <%= f.text_area :address %>
 </p>
 <br>
-
-&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
-<%= f.submit %>
+<br>
+<p style=" margin-left:25em;">
+<%= f.submit  :onclick => " return validate();" %>
+</p>
+<br>
+<br>
 <% end %>

@@ -1,3 +1,20 @@
+
+
+
+//function validate()
+//{
+//	if (document.new.firstname.value =="")
+//	{
+//		alert("plc provide your name")
+//		document.new.firstname.focus();
+//		return false;
+//		
+//	} 
+//}
+
+
+
+
 // This is a manifest file that'll be compiled into application.js, which will include all the files
 // listed below.
 //
@@ -13,4 +30,22 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require_tree .
+//= require_tree 
+function validate()
+{
+	var fname = document.getElementById("book_firstname").value
+	if (fname == "")
+	{
+		alert("plc provide your name")
+		return false;
+		
+	} 
+	return true;
+	var lname = document.getElementById("book_lastname").value
+	if(lname == "")
+	{
+		alert("please fill the lastname")
+		return false;
+	}
+	return true;
+}

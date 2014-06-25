@@ -1,30 +1,25 @@
 <h1>Female contacts </h1>
- 
-<table>
-  <tr>
-    <th>First Name</th>
-    <th>Last Name</th>
-    <th>Gender</th>
-<th> Emailid</th>
-<th>Phonenumber</th>
-<th>Address</th>
-<th>photo</th>
+ <% @books.each do |book| %>
+  <div class ="img">
+    <img src="/data/<%= book.photo %>" width = "90" height ="90"; margin: 0px; style ="float:left"; border-style ="solid";/>
 
-
-  </tr>
- 
-  <% @books.each do |book| %>
-    <tr div class ="<%= cycle('odd','even')%>">
-      <td><%= book.firstname %></td>
-      <td><%= book.lastname %></td>
-      <td><%= book.gender %></td>
-<td><%= book.emailid %></td>
-<td><%= book.phonenumber %></td>
-<td><%= book.address %></td>
-<td><img src="/data/<%= book.photo %>" width = "50" height ="50" /></td>
-<td><%= link_to 'Edit',edit_book_path(book) %></td>
-<td><%= link_to 'show',book_path(book) %></td>
-<td><%= link_to 'Destroy', book_path(book), method: :delete, data: {confirm: 'are you sure to delete this contact?' }  %></td>
-    </tr>
+    <div class="text">
+<p><u><strong>
+    <%= book.firstname %>
+  <%= book.lastname %>
+  </strong>
+  <br>
+  </u>
+</p>
+  Gender
+  <%= book.gender %><br>
+  Email &nbps
+  <%= book.emailid %><br>
+  Phone 
+<%= book.phonenumber %><br>
+Address
+<%= book.address %><br>
+</div>
+<hr>
+</div>
   <% end %>
-</table>

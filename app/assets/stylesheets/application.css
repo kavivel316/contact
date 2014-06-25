@@ -1,26 +1,56 @@
-
-.even {
-  background:   #e0f8f8;
-  height: 40px
-  width: 10px;
-}
-
-.odd {
-  background:   #f8b0f8;
-  height: 40px
-}
-.entry {
-  overflow: auto;
-  margin-top: .01em;
-  left: 50%;
-  top: 50%;
-  position: absolute;
-  margin-left: -150px;
-  margin-top: -150px;
-}
-.a_title
+header
 {
+	height:5em;
+    background:#007065;
+    width:100%;
+    margin:0px;
+    color: #EFFBFB;
 }
+
+p
+{
+margin: 0px;
+}
+body
+{
+	background-color: #dcdcdc;
+	margin: 0px;
+    background-size: cover;
+    margin :0px;
+    height:100%;
+}
+
+.img{
+margin-left: 250px;
+margin-right: 250px;
+}
+.text
+{
+    margin-left: 150px;
+    margin-right: 250px;
+    color: #007065;
+    line-height: 20px;
+    font-style: Comic Sans, Comic Sans MS, cursive
+}
+footer
+{
+	height:3em;
+    background:#007065;
+    width:100%;
+    margin:0px;
+    color: #EFFBFB;
+    clear: both;
+    padding-top: 8px;
+}
+label
+{
+    width: 20em;
+    float:left;
+    text-align: right;
+    margin-right: 2em;
+    font-style: arial;
+}
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
