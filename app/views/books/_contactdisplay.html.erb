@@ -1,0 +1,32 @@
+<form>
+	<input type="text" name "search" onkeyup="ajax(this.value);" placeholder="search here">
+</form>
+<div id ="hh">
+</div>
+<% @books.each do |book| %>
+  <div class ="container">
+    <img src="/data/<%= book.photo %>" width = 90;
+height=95; stretch= "None" ;/>
+    <div class="text">
+    <div class="nalign">
+ <a href="<%=book_path(book) %>"><%= book.firstname %>
+  <%= book.lastname %></a>
+  </div>
+<p>
+
+<div class="fa">
+  Gender
+  </div>
+  <%= book.gender %></br>
+  <div class="fa">Email
+  </div>
+  <%= book.emailid %><br>
+  <div class="fa">Phone</div>
+<%= book.phonenumber %><br>
+<div class="fa">Address</div>
+<%= book.address %><br>
+</div>
+<hr>
+</div>
+  <% end %>
+  

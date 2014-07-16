@@ -1,10 +1,18 @@
 Rails.application.routes.draw do
-  get 'books/female'
-  get 'books/male'
- resources :books
-get "first" => "books#first"
-root :to => "books#first"
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
+  # get 'books/female'
+  # get 'books/male'
 
+ resources :books do
+  collection do
+    get :male, :female, :ax
+  end
+ end
+
+
+ # get "first" => "books#first"
+root :to => "books#first"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

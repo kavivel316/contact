@@ -5,6 +5,7 @@ header
     width:100%;
     margin:0px;
     color: #EFFBFB;
+    clear: both;
 }
 
 p
@@ -20,17 +21,20 @@ body
     height:100%;
 }
 
-.img{
-margin-left: 250px;
-margin-right: 250px;
+.container
+{
+margin-left: 200px;
+margin-right: 300px;
+width: 700px;
 }
 .text
 {
     margin-left: 150px;
-    margin-right: 250px;
+    margin-right: 300px;
     color: #007065;
     line-height: 20px;
-    font-style: Comic Sans, Comic Sans MS, cursive
+    font-family: arial;
+
 }
 footer
 {
@@ -50,7 +54,72 @@ label
     margin-right: 2em;
     font-style: arial;
 }
+div.container img
+{
 
+margin: 0px;
+float: left;
+padding-top: 10px;
+}
+.al
+{
+    float: left;
+     margin: 0px;
+     width: 300px;
+     font-size: 25px;
+     font-family: arial;
+     font-weight: bold;
+     margin-top: 10px;
+     margin-left: 100px;
+
+}
+.logo
+{
+    float: left;
+}
+.con
+{
+    margin-top: 15px;
+}
+.ar
+{
+    float: right;
+    margin-left: 60px;
+    margin: 0px;
+    width: 400px;
+    margin: 45px;
+    font-family: arial;
+    font-weight: bold;
+
+}
+.nalign
+{
+    font-family: arial;
+    font-weight: bold;
+    font-size: 19px;
+    text-decoration: underline;
+}
+.nalign a
+{
+    color: #007065;
+}
+.fpage
+{
+    width: 700px;
+    margin-left: 200px;
+    margin-top: 90px;
+    margin-bottom: 100px;
+}
+.fa
+{
+    float: left;
+    width: 60px;
+    margin-right: 10px;
+}
+#hh
+ {
+    white-space:pre-wrap
+}
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.

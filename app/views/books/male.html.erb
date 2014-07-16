@@ -1,25 +1,2 @@
-<h1> Male contacts </h1>
-<% @books.each do |book| %>
-  <div class ="img">
-    <img src="/data/<%= book.photo %>" width = "90" height ="90"; margin: 0px; style ="float:left"; border-style ="solid";/>
-
-    <div class="text">
-<p><u><strong>
-    <%= book.firstname %>
-  <%= book.lastname %>
-  </strong>
-  <br>
-  </u>
-</p>
-  Gender
-  <%= book.gender %><br>
-  Email &nbps
-  <%= book.emailid %><br>
-  Phone 
-<%= book.phonenumber %><br>
-Address
-<%= book.address %><br>
-</div>
-<hr>
-</div>
-  <% end %> 
+<h1 style="margin-left:11em;margin-top: 3em;font-size:18px;font-family:Arial;color: #007065"><u> Male Contacts</u> </h1>
+  <%= render 'contactdisplay' %>

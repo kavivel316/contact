@@ -1,0 +1,59 @@
+<%= form_for @book do |f| %>
+<% if @book.errors.any? %>
+<div id = "error_explanation">
+<h2><%= pluralize(@book.errors.count, "error") %>
+fill the form correctely <h2>
+<ul>
+<% @book.errors.full_messages.each do |msg| %>
+<li><%= msg %></li>
+<% end %>
+</ul>
+</div>
+<% end %>
+<p>
+<%= f.label :First_Name %>
+
+<%= f.text_field :firstname %>
+</p>
+  <br>
+<p>
+<%= f.label :Last_Name %>
+
+<%= f.text_field :lastname %>
+</p>
+<br>
+<p>
+<%= f.label :Emailid %>
+<%= f.text_field :emailid %> 
+</p>
+<br>
+<br>
+<p style="margin-left:21em;" >
+ 
+<%= radio_button :book, :gender, :male  %> Male
+<%= radio_button :book, :gender, :female %>Female
+</p>
+<br>
+<p>
+<%= f.label :Phonenumber %>
+
+<%= f.text_field :phonenumber%>
+</p>
+<br>
+<p>
+<%= f.label :photo  %>
+<%= f.file_field :photo %>
+</p>
+<br>
+<p>
+<%= f.label :Address %>
+<%= f.text_area :address %>
+</p>
+<br>
+<br>
+<p style=" margin-left:25em;">
+<%= f.submit  :onclick => " return validate();" %>
+</p>
+<br>
+<br>
+<% end %>

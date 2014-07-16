@@ -33,7 +33,7 @@
 //= require_tree 
 function validate()
 {
-	var fname = document.getElementById("book_firstname").value
+	var fname = document.getElementById("book_firstname").value;
 	if (fname == "")
 	{
 		alert("plc provide your name")
@@ -41,11 +41,57 @@ function validate()
 		
 	} 
 	return true;
-	var lname = document.getElementById("book_lastname").value
+	var lname = document.getElementById("book_lastname").value;
 	if(lname == "")
 	{
 		alert("please fill the lastname")
 		return false;
 	}
 	return true;
+	var email= document.getElementById("book_emailid").value;
+	var len = email.length;
+	var 
+
 }
+
+function ajax(firstname)
+{
+	var pathxml;
+	var answer;
+	var result;
+	if(firstname.length== 0)
+	{
+		document.getElementById("hh").innerHTML = "";
+		return;
+	}
+	if (window.XMLHttpRequest) {
+      pathxml = new XMLHttpRequest();
+	}
+	else
+	{
+		pathxml = new ActiveXObject("Microsoft.XMLHTTP");
+	}
+
+	pathxml.onreadystatechange= function()
+	{
+		if (pathxml.readyState==4 && pathxml.status==200) 
+		{
+			 answer = JSON.parse(pathxml.responseText);
+          document.getElementById("hh").innerHTML = "";
+        for (var i=0; i<=answer.length; i++)
+		{
+			result = answer[i].firstname + " " +answer[i].lastname + "\n";
+			document.getElementById("hh").innerHTML += result;
+		}
+		}
+		
+	}
+	pathxml.open("GET","books/ax?firstname=" + firstname, true);
+	pathxml.send();
+}
+/*
+function ajax()
+{
+	alert("kavi")
+}
+*/

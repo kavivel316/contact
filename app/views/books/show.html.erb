@@ -1,8 +1,9 @@
-<h1 align="center" >Details about the contact: </h1> 
-<%= @book.firstname %>
-<div class ="entry">
-<img src="/data/<%=@book.photo %>" width="150" height = "200"/>
+<h1 align="center" >Details about the contact:<%= @book.firstname %> </h1> 
+
+<div class ="entry" style="margin-left:200px; float:left">
+<img src="/data/<%=@book.photo %>" width="150" height = "200" />
 </div>
+<div class="display" style="margin-left:500px">
 <p>First Name:
 <%= @book.firstname %>
 </p>
@@ -27,3 +28,6 @@ Gender
 <br>
 <%= link_to 'back to list', books_path %> 
 <%= link_to 'to create new', new_book_path %> 
+<%= link_to 'edit', edit_book_path %>
+</p>
+</div>

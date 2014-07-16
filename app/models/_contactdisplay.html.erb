@@ -1,0 +1,23 @@
+<% @books.each do |book| %>
+  <div class ="container">
+    <img src="/data/<%= book.photo %>" width = 90;
+height=95; stretch= "None" ;/>
+    <div class="text">
+    <div class="nalign">
+    <%= book.firstname %>
+  <%= book.lastname %>
+  </div>
+<p>
+  Gender:
+  <%= book.gender %><br>
+  Email:
+  <%= book.emailid %><br>
+  Phone :
+<%= book.phonenumber %><br>
+Address:
+<%= book.address %><br>
+</div>
+<hr>
+</div>
+  <% end %>
+  

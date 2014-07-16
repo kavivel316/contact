@@ -5,25 +5,33 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-  <header>
-<p align="left" > <h1 style="margin:0px" ><img src="/data/contact.png" width="50px" height="50px"/>
-Contact Book
-</h1></p>
-<p align="right">
-<%= link_to_unless_current "All",books_path %>
-<%= link_to_unless_current "Female", books_female_path %>
-<%= link_to_unless_current "Male", books_male_path %><br>
-</p>
-</header>
+    <header>
+         <div class="al" >
+<div class = "logo">
+         <img src="/data/contact.png" width="50px" height = "50px"/>
+         </div>
+         <div class="con">
+         Contact Book
+         </div>
+            </div>
+        <div  class="ar" >
+ <%= link_to_unless_current "Home",root_path , :style =>"color:white" %>
+&nbsp
+<%= link_to_unless_current "All",books_path,:style =>"color:white" %>
+&nbsp&nbsp
+<%= link_to_unless_current "Female", female_books_path , :style =>"color:white"%>
+&nbsp&nbsp
+<%= link_to_unless_current "Male",male_books_path , :style =>"color:white"%><br>
+&nbsp&nbsp
+          </div>
+     </header>
 
 </head>
 <body>
-
 <%= yield %>
-
 </body>
-<footer>
+   <footer>
 	<p align="center"> All text and design @2014 Report Bee Edusys Ltd.
 	</p>
-</footer>
+    </footer>
 </html>
